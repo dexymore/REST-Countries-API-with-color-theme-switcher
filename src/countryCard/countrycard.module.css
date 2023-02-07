@@ -1,0 +1,18 @@
+.cardheight{
+    height:100%  !important;
+    box-shadow: 0 1px 3px 1px rgb(0 0 0 / 20%);
+
+}
+  
+  .cardheight img{
+    height: 190px !important ;
+  }
+  @media screen and (min-width: 0) and (max-width: 750px) {
+
+  
+    .cardheight img{
+      height: 175px !important;
+    }
+
+
+  }
