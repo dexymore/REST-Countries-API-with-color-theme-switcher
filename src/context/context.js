@@ -1,17 +1,39 @@
 import { createContext, useState } from "react";
+import axios from "axios";
+import { useEffect } from "react";
 
 export let Themecontext=createContext("dark")
 function Themecontextprovide(props)
 {
-const[Theme,setTheme] =useState("dark")
 function changeTheme()
 {
     Theme==="dark"?setTheme("light"):setTheme("dark");
 
 }
-return<Themecontext.Provider value={{Theme ,changeTheme}}>
+
+const[Theme,setTheme] =useState("dark")
+const [countries, setcountries] = useState([]);
+
+async function CountriesData() {
+  
+      const countries = await axios.get("https://restcountries.com/v3.1/all");
+      setcountries(countries.data);
+
+  }
+useEffect(() => {
+CountriesData();
+
+},[]);
+
+
+return<Themecontext.Provider value={{Theme ,changeTheme,countries,setcountries}}>
 {props.children}
 </Themecontext.Provider>
 
 }
+
+
+
+
+
 export default  Themecontextprovide;
