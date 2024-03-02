@@ -396,7 +396,7 @@ height: 250px;
 justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 20px;
+
 }
 
 .correct {
@@ -409,13 +409,66 @@ justify-content: center;
   color: rgb(238, 226, 226) !important; 
 }
 .score{
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    background-color: #139C49;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: #86add13a 0px 0px 9px 0px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.trails{
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  background-color: #D1485F;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: #86add13a 0px 0px 9px 0px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.gameover{
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
   color: white;
   font-size: 2rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  background-color: brown;
+  background-color: rgba(255, 255, 255, 0);
   padding: 10px;
   border-radius: 10px;
   border: 1px solid transparent;
@@ -426,5 +479,140 @@ justify-content: center;
   justify-content: center;
   align-items: center;
 
-
 }
+/* .candidateCountry{
+  border: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: #86add13a 0px 0px 9px 0px;
+} */
+.candidateCountry img{
+  width: 75%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 4px solid #26292b83;
+}
+.gameover:hover{
+  background-color: rgba(0, 0, 0, 0.432);
+}
+ @media screen and (min-width: 0) and (max-width: 750px) {
+  .flagGame {
+    width: 80vw; /* Set the width to 100% of the viewport width */
+    height: 80vh; /* Set the height to 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #54b3d6;
+    border-radius: 10px;
+    background-color: #1d2730;
+    margin: 0 auto; /* Horizontally center the div */
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  }
+  .flagGame img {
+    width: 250px;
+  height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    
+  
+  }
+  .countryButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 50%;
+    margin-top: 20px;
+  
+  }
+  
+  .countryButtons button {
+    flex: 1;
+    /*Distributeequalwidthtoallbuttons*/width: 100%;
+    /*Ensurebuttonstakeupthefullwidthofthecontainer*/margin: 1%;
+    padding: 1%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: goldenrod;
+    color: rgb(5, 5, 5);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: #86add13a 0px 0px 9px 0px;
+    text-decoration: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 10px;
+  }
+  .candidateCountry{
+    display: flex;
+    flex-direction: row;
+  justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }
+
+  .gameover{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: #86add13a 0px 0px 9px 0px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .youWin{
+    margin: 10px;
+  }
+  .youlost{
+margin: 30px;
+  }
+  .candidateCountry img{
+    width:100%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 4px solid #26292b83;
+  }
+  
+ }
+
+ .flagGame{
+  /* width: 100%;
+  height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #54b3d6;
+  border-radius: 10px;
+  background-color: #1d2730;
+  margin-top: 20px;
+  
+
+ }

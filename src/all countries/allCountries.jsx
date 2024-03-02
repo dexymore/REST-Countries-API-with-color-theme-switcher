@@ -132,7 +132,7 @@ function AllCountries() {
               try now flag game
             </h2> */}
 
-            <Link className="playNowButton" to='/flagGame' >play now flag game</Link>
+            <Link className="playNowButton" to='/flagGame/singlePLayer' >play now flag game</Link>
           </div>
         </div>
       </div>
